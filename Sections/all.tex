@@ -1,0 +1,19 @@
+% Main body
+
+\input{Sections/introduction}
+
+
+
+
+% References
+\iffull \printbibliography \fi
+
+\ifACM \bibliographystyle{ACM-Reference-Format.bst} \fi
+\ifUSENIX \bibliographystyle{plain} \fi
+\ifIEEE \bibliographystyle{plain} \fi
+\ifLNCS \bibliographystyle{Conferences/LNCS/splncs04.bst} \fi
+
+\iffull \else \bibliography{references} \fi
+
+% Appendix
+\ifSP \appendices \else \appendix \fi

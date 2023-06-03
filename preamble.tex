@@ -1,0 +1,41 @@
+\input{Conferences/templates.tex}
+\iffull \bibliography{references} \fi
+\newif \ifcomments \commentstrue
+
+\usepackage{xcolor}
+\usepackage{url}
+
+\usepackage{amsfonts,amsmath}
+\ifLNCS\else\usepackage{amsthm}\fi
+\ifACM\else\usepackage{amssymb}\fi
+
+
+\ifcomments
+	\newcommand{\mahimna}[1]{\textsf{\small{\color{violet!80}{[Mahimna: {#1}]}}}}
+\else
+	\newcommand{\mahimna}[1]{}
+\fi
+
+
+\iffull \newcommand{\mypara}{\paragraph}
+\else \newcommand{\mypara}[1]{\smallskip\noindent\textbf{#1}\;} \fi
+
+
+\ifLNCS\else
+
+\iffull \newtheorem{theorem}{Theorem}[section]
+\else \newtheorem{theorem}{Theorem} \fi
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\newtheorem*{claim}{Claim}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\fi

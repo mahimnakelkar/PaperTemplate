@@ -1,0 +1,49 @@
+% Templates
+\newif \iffull 
+\newif \ifACM
+\newif \ifUSENIX
+\newif \ifIEEE
+\newif \ifLNCS
+
+% Conferences
+\newif \ifCCS
+\newif \ifSP
+\newif \ifNDSS
+\newif \ifCrypto
+\newif \ifFC
+
+\def\fullstring{full}
+\def\ACMstring{ACM}
+\def\USENIXstring{USENIX}
+\def\IEEEstring{IEEE}
+\def\LNCSstring{LNCS}
+
+\def\CCSstring{CCS}
+\def\SPstring{SP}
+\def\NDSSstring{NDSS}
+\def\Cryptostring{CRYPTO}
+\def\FCstring{FC}
+
+\ifx \version\fullstring \fulltrue \fi
+\ifx \version\ACMstring \ACMtrue \fi
+\ifx \version\USENIXstring \USENIXtrue \fi
+\ifx \version\IEEEstring \IEEEtrue \fi
+\ifx \version\LNCSstring \LNCStrue \fi
+
+\ifx \version\CCSstring \ACMtrue \CCStrue \fi
+\ifx \version\SPstring \IEEEtrue \SPtrue \fi
+\ifx \version\NDSSstring \IEEEtrue \NDSStrue \fi
+\ifx \version\Cryptostring \LNCStrue \Cryptotrue \fi
+\ifx \version\FCstring \LNCStrue \FCtrue \fi
+
+%------------------------ TEMPLATES ------------------------%
+\iffull \input{Conferences/FullVersion/fullversion.tex} \fi
+\ifACM \input{Conferences/ACM/acm.tex} \fi
+\ifUSENIX \input{Conferences/USENIX/usenix.tex} \fi
+\ifIEEE \input{Conferences/IEEE/IEEE.tex} \fi
+\ifLNCS \input{Conferences/LNCS/lncs.tex} \fi
+%-----------------------------------------------------------%
+
+
+
+

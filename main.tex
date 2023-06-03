@@ -1,0 +1,19 @@
+\def\version{full}
+\newif \ifsubmission \submissiontrue
+
+\input{preamble}
+
+\commentstrue
+
+
+\begin{document}
+
+\title{Paper Title}
+
+\ifACM \input{abstract} \maketitle \pagestyle{plain}
+\else \maketitle \input{abstract} \fi
+
+
+\input{Sections/all.tex}
+
+\end{document}
