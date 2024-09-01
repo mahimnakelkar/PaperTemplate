@@ -1,5 +1,5 @@
 % usenix.sty - to be used with latex2e for USENIX.
-% To use this style file, look at the template usenix_template.tex
+% To use this style file, look at the template usenix2019_v3.1.tex
 %
 % $Id: usenix.sty,v 1.2 2005/02/16 22:30:47 maniatis Exp $
 %
@@ -12,6 +12,8 @@
 % 2018-12-19 [for ATC'19]: add packages to help embed all fonts in
 %   pdf; to improve appearance (hopefully); to make refs and citations
 %   clickable in pdf
+%
+% 2020-09-21 file updated to comment out flushend and make it optional
 
 %
 % USENIX papers are two-column.
@@ -28,7 +30,11 @@
 
 % appearance
 \usepackage[kerning,spacing]{microtype} % more compact and arguably nicer
-\usepackage{flushend} % make cols in last page equal in size
+
+% Uncomment the following line if you want the columns of the last page 
+% equal in size. But note that doing so may cause issues with some 
+% document-generating tools.
+% \usepackage{flushend}
 
 % refs and bib
 \usepackage{cite}               % order multiple entries in \cite{...}
@@ -61,7 +67,7 @@
 \addtolength{\oddsidemargin}{-0.25in}
 \addtolength{\evensidemargin}{-0.25in}
 
-% Usenix wants no page numbers for camera-ready papers, so that they can
+% USENIX wants no page numbers for camera-ready papers, so that they can
 % number them themselves.  But submitted papers should have page numbers
 % for the reviewers' convenience.
 % 
@@ -69,7 +75,7 @@
 % \pagestyle{empty}
 
 %
-% Usenix titles are in 14-point bold type, with no date, and with no
+% USENIX titles are in 14-point bold type, with no date, and with no
 % change in the empty page headers.  The whole author section is 12 point
 % italic--- you must use {\rm } around the actual author names to get
 % them in roman.
